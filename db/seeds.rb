@@ -1,5 +1,3 @@
-# require 'faker'
-
 puts 'Cleaning database...'
 Restaurant.destroy_all
 
