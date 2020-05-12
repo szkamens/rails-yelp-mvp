@@ -6,9 +6,18 @@
 
 <p class="well"><strong>Category:</strong> <%= @restaurant.category %></p>
 
+
+<p class="well"><strong>Reviews:</strong></p>
+
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
 <hr>
 
 <%= link_to "Add review", new_restaurant_review_path(@restaurant), class: "btn btn-success" %>
+
 
 <%= link_to restaurants_path do %>
   <i class="fa fa-history"></i> Back to list
